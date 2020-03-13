@@ -1,12 +1,12 @@
 # Docker MS SQL Server Operations 
 ---
 
-This is a showcase of **[Thorntail](https://thorntail.io)**, formerly knowns as **Wildfly Swarm**. The same way we can quickly get going with **Spring Boot** to build web apps, there' something similar to it for those who want to rather use more of **Java / Jakarta EE**. This code base is reference for the **[Java EE Micro Services Using Thorntail](https://informingtechies.blogspot.com/2020/03/micro-services-using-thorntail.html)** article.
+A collection that contains some of the common operations on a MSSQL Service that's running on Docker. This is also based on the article, **[Dokcer Operations For MSSQL Server](https://informingtechies.blogspot.com/2020/03/micro-services-using-thorntail.html)** which gives you insight on what's happening in the script. 
 
 
-## Technology Stack Used
+## Technologies & Tools Stack Used
 
-1. Java 8
+1. Unix Shell (Bash / ZSH)
 2. Maven 3.6.2
 3. IntelliJ IDEA *(You may use an IDE of your choice)*
 
@@ -14,20 +14,19 @@ This is a showcase of **[Thorntail](https://thorntail.io)**, formerly knowns as 
 ## Setting Up
 
 ```bash
-# After checking out run:
-mvn clean install
-```
-
-```bash
-# To run the Service type:
-java -jar target/thorntail-api-thorntail.jar
+# import the scipt on your terminal
+source ~/where-ever/you/cloned/the/script/docker-mssql.sh
 ```
 
 
 ## Testing                     
 
-- Access the link [http://localhost:8881/swagger-ui](http://localhost:8881/swagger-ui)
-- Insert the url *http://localhost:8881/that-service/swagger.json* in the text box. 
+```bash
+# Backing Up 
+dockerMSSQLBackupDatabase DatabaseName BackupFilePrefix
 
+# Restoring
+dockerMSSQLRestoreDatabase DatabaseName /path/to/your/BackupFile.bak
+```
 
-And there you go, should be all set. 
+All Done! Enjoy.
