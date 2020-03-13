@@ -7,7 +7,6 @@ A collection that contains some of the common operations on a MSSQL Service that
 ## Technologies & Tools Stack Used
 
 1. Unix Shell (Bash / ZSH)
-2. Maven 3.6.2
 3. IntelliJ IDEA *(You may use an IDE of your choice)*
 
 
