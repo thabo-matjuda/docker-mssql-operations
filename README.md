@@ -14,7 +14,7 @@ A collection that contains some of the common operations on a MSSQL Service that
 
 ```bash
 # import the scipt on your terminal
-source ~/where-ever/you/cloned/the/script/docker-mssql.sh
+source ~/where-ever/you/cloned/the/repo/docker-mssql-operations/docker-mssql.sh
 ```
 
 
